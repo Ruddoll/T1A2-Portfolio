@@ -110,6 +110,12 @@ img {
     margin-right: .9em;
 }
 
+@media (max-width: 800px) {
+    #dark-mode-btn {
+        margin-right: 1.2em
+    }
+}
+
 
 
 /* Typography */
