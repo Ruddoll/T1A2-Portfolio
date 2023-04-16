@@ -8,8 +8,14 @@ The purpose of my portfolio website is to provide a platform to showcase my rele
 
 The website has a blog, dark mode, links to my social media and past projects.
 
-- Sitemap
-- Screenshots
-The target audience are hiring managers/
+My [sitemap](./sitemap.xml).
+
+![html-screenshot](./img/html-screenshot.png)
+
+![javascript-screenshot](./img/javascipt-screenshot.png)
+
+![css-screenshot](./img/css-screenshot.png)
+
+The target audience are hiring managers.
 
 I used HTML CSS and JavaScript to make this website.
