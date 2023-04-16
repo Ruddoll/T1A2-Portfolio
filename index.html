@@ -3,20 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DevMoyo Portfolio Website</title>
+        <title>Moyo's Portfolio Website</title>
         <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" /> 
 
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="./css/style.css">
-    
+        
+        <link rel="shortcut icon" href="./img/moyo-favicon.ico">
+
+        <!-- Icon for the dark mode -->
+        <script src="https://kit.fontawesome.com/91e547386c.js" crossorigin="anonymous"
+    ></script>
+
     </head>
     <body>
         <header>
             <div class="logo">
-                <img src="./img/moyo-logo-1.png" alt="logo">
-                <button class="logo-btn">
+                <a href="./index.html"><img src="./img/moyo-logo-1.png" alt="logo"></a>
             </div>
             <button class="nav-toggle" aria-label="toggle navigation">
                 <span class="hamburger"></span>
@@ -29,6 +34,7 @@
                         <li class="nav__item"><a href="#footer" class="nav__link">Contact</a></li>
                     </ul>
                 </nav>
+            <button i id="dark-mode-btn" class="toggler far fa-moon" onclick="myFunction()">
         </header>
 
         <!-- Introduction -->
@@ -39,6 +45,9 @@
             <p class="section__subtitle section__subtitle--intro">full-stack dev</p>
             <img src="./img/moyo-1.jpg" alt="a picture of Moyo Adewusi posing" class="intro__img">
         </section>
+
+        <!-- Blog -->
+
 
         <!-- My services -->
         <section class="my-services" id="services">
@@ -83,53 +92,53 @@
 
             <div class="portfolio">
                 <!-- Portfolio item 01 -->
-                <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-01.jpg" alt="" class="portfolio__img">
+                <a href="./portfolio-item.html" class="portfolio__item">
+                    <img src="./img/portfolio-01.jpg" alt="Image of project 1" class="portfolio__img">
                 </a>
 
                 <!-- Portfolio item 02 -->
                 <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-02.jpg" alt="" class="portfolio__img">
+                    <img src="./img/portfolio-02.jpg" alt="Image of project 2" class="portfolio__img">
                 </a>
 
                 <!-- Portfolio item 03 -->
                 <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-03.jpg" alt="" class="portfolio__img">
+                    <img src="./img/portfolio-03.jpg" alt="Image of project 3" class="portfolio__img">
                 </a>
 
                 <!-- Portfolio item 04 -->
                 <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-04.jpg" alt="" class="portfolio__img">
+                    <img src="./img/portfolio-04.jpg" alt="Image of project 4" class="portfolio__img">
                 </a>
 
                 <!-- Portfolio item 05 -->
                 <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-05.jpg" alt="" class="portfolio__img">
+                    <img src="./img/portfolio-05.jpg" alt="Image of project 5" class="portfolio__img">
                 </a>
 
                 <!-- Portfolio item 06 -->
                 <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-06.jpg" alt="" class="portfolio__img">
+                    <img src="./img/portfolio-06.jpg" alt="Image of project 6" class="portfolio__img">
                 </a>
 
                 <!-- Portfolio item 07 -->
                 <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-07.jpg" alt="" class="portfolio__img">
+                    <img src="./img/portfolio-07.jpg" alt="Image of project 7" class="portfolio__img">
                 </a>
 
                 <!-- Portfolio item 08 -->
                 <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-08.jpg" alt="" class="portfolio__img">
+                    <img src="./img/portfolio-08.jpg" alt="Image of project 8" class="portfolio__img">
                 </a>
 
                 <!-- Portfolio item 09 -->
                 <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-09.jpg" alt="" class="portfolio__img">
+                    <img src="./img/portfolio-09.jpg" alt="Image of project 9" class="portfolio__img">
                 </a>
 
                 <!-- Portfolio item 10 -->
                 <a href="#" class="portfolio__item">
-                    <img src="./img/portfolio-10.jpg" alt="" class="portfolio__img">
+                    <img src="./img/portfolio-10.jpg" alt="Image of project 10" class="portfolio__img">
                 </a>
             </div>
         </section>

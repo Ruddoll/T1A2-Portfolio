@@ -15,9 +15,10 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-light: #fff;
-    --clr-dark: #303030;
+    --clr-primary: #fff;
+    --clr-secondary: #303030;
     --clr-accent: #16e0bd;
+    --clr-accent2: #e01639;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -27,6 +28,13 @@
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
           0.125em 0.125em 0.25em rgba(0,0,0,0.15);
 }
+
+.dark-mode {
+    --clr-primary: #303030;
+    --clr-secondary: #fff;
+    --clr-accent: #e01639;
+    --clr-accent2: #16e0bd;
+  }
 
 @media (min-width: 800px) {
     :root {
@@ -46,8 +54,8 @@ html {
 }
 
 body {
-    background: var(--clr-light);
-    color: var(--clr-dark);
+    background: var(--clr-primary);
+    color: var(--clr-secondary);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
@@ -64,7 +72,7 @@ img {
 }
 
 :focus {
-    outline: 3px solid var(--clr-accent);
+    outline: 3px solid var(--clr-accent2);
     outline-offset: 3px;
 }
 
@@ -76,7 +84,7 @@ img {
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
-    color: var(--clr-dark);
+    color: var(--clr-secondary);
     text-decoration: none;
     cursor: pointer;
     font-size: .8rem;
@@ -88,6 +96,18 @@ img {
 
 .btn:hover {
     transform: scale(1.1);
+    color: var(--clr-accent);
+    background-color: var(--clr-accent2);
+}
+
+#dark-mode-btn {
+    display: block;
+    position: relative;
+    background: var(--clr-accent);
+    color: var(--clr-secondary);
+    cursor: pointer;
+    margin-top: 4em;
+    margin-right: .9em;
 }
 
 
@@ -147,13 +167,13 @@ header {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 80px;
 }
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
+    background: var(--clr-secondary);
+    color: var(--clr-primary);
     top: 0;
     bottom: 0;
     left: 0;
@@ -183,7 +203,7 @@ header {
 }
 
 .nav__link:hover {
-    color: var(--clr-accent);
+    color: var(--clr-accent2);
 }
 
 .nav-toggle {
@@ -207,10 +227,12 @@ header {
 
 .nav-open .hamburger {
     transform: rotate(.625turn);
+    background-color: var(--clr-accent2);
 }
 
 .nav-open .hamburger::before {
     transform: rotate(90deg) translateX(-6px);
+    background-color: var(--clr-accent2);
 }
 
 .nav-open .hamburger::after {
@@ -296,11 +318,11 @@ header {
 /* My services section */
 
 .my-services {
-    background-color: var(--clr-dark);
+    background-color: #303030;
     background-image: url(../img/moyo-desk.jpg);
     background-size: cover;
     background-blend-mode: multiply;
-    color: var(--clr-light);
+    color: #fff;
     text-align: center;
 }
 
@@ -315,7 +337,7 @@ header {
     width: 2em;
     height: 1px;
     margin: 0.5em auto 1em;
-    background: var(--clr-light);
+    background: var(--clr-primary);
     opacity: 0.25;
 }
 
@@ -398,8 +420,8 @@ header {
 /* My Work */
 
 .my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
     text-align: center;
 }
 
@@ -409,7 +431,7 @@ header {
 }
 
 .portfolio__item {
-    background: var(--clr-accent);
+    background: var(--clr-accent2);
     overflow: hidden;
 }
 
@@ -454,6 +476,7 @@ header {
 .footer__link:hover,
 .social-list__link:hover {
     opacity: .7;
+    color: var(--clr-accent2);
 }
 
 .footer__link:hover {
@@ -475,6 +498,26 @@ header {
     margin: 0 1.25em;
 }
 
+.social-list__item:hover {
+    filter: drop-shadow(0 0 10px var(--clr-accent2)) opacity(1) ;
+}
+
 .social-list__link {
     padding: .5em;
+}
+
+
+
+/* Individual portfolio item styles */
+
+.portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
