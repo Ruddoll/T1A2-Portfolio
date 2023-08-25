@@ -29,6 +29,13 @@
           0.125em 0.125em 0.25em rgba(0,0,0,0.15);
 }
 
+.dark-mode {
+    --clr-primary: #303030;
+    --clr-secondary: #fff;
+    --clr-accent: #e01639;
+    --clr-accent2: #16e0bd;
+  }
+
 @media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
@@ -91,6 +98,22 @@ img {
     transform: scale(1.1);
     color: var(--clr-accent);
     background-color: var(--clr-accent2);
+}
+
+#dark-mode-btn {
+    display: block;
+    position: relative;
+    background: var(--clr-accent);
+    color: var(--clr-secondary);
+    cursor: pointer;
+    margin-top: 4em;
+    margin-right: .9em;
+}
+
+@media (max-width: 800px) {
+    #dark-mode-btn {
+        margin-right: 1.2em
+    }
 }
 
 
@@ -278,7 +301,6 @@ header {
 /* Blog section */
 
 .blog {
-    background-color: var(--clr-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -300,7 +322,7 @@ header {
 
 .blog-heading h3 {
     font-size: 2.4rem;
-    color: var(--clr-primary);
+    color: var(--clr-secondary);
     font-weight: var(--fw-bold);
 }
 
@@ -381,14 +403,6 @@ header {
 
 .intro {
     position: relative;
-    background-color: #303030;
-
-    /* temporary image, will replace with gym image or image slideshow */
-    background-image: url(../img/temp-img.png);
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: #fff;
-    text-align: center;
 }
 
 .intro__img {
@@ -396,7 +410,7 @@ header {
 }
 
 .section__subtitle--intro {
-    display: inline;
+    display: inline-block;
 }
 
 @media (min-width: 600px) {
@@ -431,19 +445,69 @@ header {
 
 
 
-/* About us */
+/* My services section */
 
-.about-us__img {
+.my-services {
+    background-color: #303030;
+    background-image: url(../img/moyo-desk.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: #fff;
+    text-align: center;
+}
+
+.section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-primary);
+    opacity: 0.25;
+}
+
+.services {
+    margin-bottom: 4em;
+}
+
+.service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service + .service {
+        margin-left: 2em;
+    }
+}
+
+
+
+/* About me */
+
+.about-me__img {
     box-shadow: var(--bs);
 }
 
-.about-us {
+.about-me {
     max-width: 1000px;
     margin: 0 auto;
 }
 
 @media (min-width: 600px) {
-    .about-us {
+    .about-me {
         display: grid;
         grid-template-columns: 1fr 200px;
         grid-template-areas: 
@@ -468,7 +532,7 @@ header {
         max-width: 63%;
     }
 
-    .about-us__img {
+    .about-me__img {
         grid-area: img;
         position: relative;
         z-index: 2;
@@ -476,13 +540,47 @@ header {
 }
 
 @media (min-width: 800px) {
-    .about-us {
+    .about-me {
         grid-template-columns: 1fr 260px;
     }
 }
 
 
 
+/* My Work */
+
+.my-work {
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio__item {
+    background: var(--clr-accent2);
+    overflow: hidden;
+}
+
+.portfolio__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: .5;
+}
 
 
 
@@ -540,7 +638,7 @@ header {
 
 
 
-/* Individual item styles */
+/* Individual portfolio item styles */
 
 .blog-item-individual {
     padding: 0 2em 2em;
